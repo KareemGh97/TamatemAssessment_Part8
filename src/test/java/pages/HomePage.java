@@ -14,31 +14,14 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-
     @FindBy(xpath = "//*[@text='التسجيل عبر Facebook']")
     WebElement signInWithFacebookBtn;
 
-    @FindBy(xpath = "//*[@text='دردشة']")
-    WebElement chatBtn;
-
-    @FindBy(xpath = "//*[@text='عام']")
-    public static WebElement generalChat;
-
-    @FindBy(xpath = "//*[@text='خاص']")
-    public static WebElement privateChat;
-
-    @FindBy(xpath = "//*[@text='فريق']")
-    public static WebElement teamChat;
-
-
+    @FindBy(xpath = "//*[@text='الرئيسية']")
+    public static WebElement homeBtn;
 
     public void clickOnLoginViaFaceBook() throws Exception {
         ActionHelper.waitForExistance(signInWithFacebookBtn,10);
         signInWithFacebookBtn.click();
-    }
-
-    public void openChatPage() throws Exception {
-        ActionHelper.waitForExistance(chatBtn,10);
-        chatBtn.click();
     }
 }
